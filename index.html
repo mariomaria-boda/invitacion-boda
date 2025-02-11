@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#foto-novios">Nosotros</a></li>
+            <li><a href="#wedding-event">Wedding Event</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#asistencia">Asistencia</a></li>
+        </ul>
+        
+    </nav>
+
+    <!-- Header with Countdown (Unchanged Style) -->
+    <header id="inicio" class="hero">
+        <div class="overlay">
+            <p class="wedding-label">Wedding.</p>
+            <h1>María & Mario</h1>
+            <p class="wedding-date">27/09/2025</p>
+            <p class="countdown-label">Ya sólo quedan...</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">0</span>
+                    <p>DÍA</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">0</span>
+                    <p>HORA</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">0</span>
+                    <p>MINUTO</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">0</span>
+                    <p>SEGUNDO</p>
+                </div>
+            </div>
+            <a href="#asistencia" class="save-the-date">Save the Date</a>
+        </div>
+    </header>
+
+    <!-- Couple's Photo Section -->
+    <section id="foto-novios" class="foto-novios">
+        <h2 class="titulo">¡Nos casamos!</h2>
+        <div class="contenedor-imagen">
+            <img src="assets/foto-novios.jpg" alt="Foto de los novios">
+        </div>
+        <p class="mensaje">Nos gustaría contar con vuestra compañía para celebrar un día tan especial.</p>
+    </section>
+
+    <!-- Wedding Event Section -->
+    <section id="wedding-event" class="evento">
+        <h2 class="titulo">Wedding Events</h2>
+        <div class="eventos-container">
+            <!-- Ceremony Section -->
+            <div class="evento-item">
+                <h3>Santa Bárbara</h3>
+                <img src="assets/ceremony-place.jpg" alt="Iglesia de Santa Bárbara">
+                <p>La ceremonia tendrá lugar en la iglesia de Santa Bárbara, en el centro de Madrid, cerca de la plaza de Colón.</p>
+                <a href="https://www.google.com/maps?q=Iglesia+de+Santa+Barbara,+Madrid" target="_blank">Ver en Google Maps</a>
+            </div>
+            <!-- Reception Section -->
+            <div class="evento-item">
+                <h3>La Gaivota</h3>
+                <img src="assets/reception-place.jpg" alt="Finca La Gaivota">
+                <p>La celebración será en la finca La Gaivota, en Aravaca. Un autocar saldrá desde la iglesia una vez terminada la ceremonia.</p>
+                <a href="https://www.google.com/maps?q=Finca+La+Gaivota,+Aravaca" target="_blank">Ver en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline">
+        <h2 class="titulo">Timeline</h2>
+        <div class="timeline-container">
+            <!-- Timeline Event 1 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/ceremony-1.jpg" alt="Ceremonia">
+                </div>
+                <div class="timeline-content">
+                    <h3>Ceremonia</h3>
+                    <p><span>⏰ 6:30 PM</span></p>
+                    <p>Os esperamos en la iglesia para comenzar la ceremonia.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Event 2 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/bus-1.jpg" alt="Autobús de salida">
+                </div>
+                <div class="timeline-content">
+                    <h3>Autobús de salida</h3>
+                    <p><span>⏰ 8:00 PM</span></p>
+                    <p>El autobús saldrá cerca de la iglesia hacia La Gaivota.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Event 3 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/cocktail-1.jpg" alt="Cóctel">
+                </div>
+                <div class="timeline-content">
+                    <h3>Cóctel</h3>
+                    <p><span>⏰ 8:30 PM</span></p>
+                    <p>¡Comienza la celebración!</p>
+                </div>
+            </div>
+
+            <!-- Timeline Event 4 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/banquet-1.jpg" alt="Banquete">
+                </div>
+                <div class="timeline-content">
+                    <h3>Banquete</h3>
+                    <p><span>⏰ 10:00 PM</span></p>
+                </div>
+            </div>
+
+            <!-- Timeline Event 5 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/dance-1.jpg" alt="A bailar">
+                </div>
+                <div class="timeline-content">
+                    <h3>¡A bailar!</h3>
+                    <p><span>⏰ 12:00 AM </span></p>
+                    <p>¡Comienza la fiesta!</p>
+                </div>
+            </div>
+
+            <!-- Timeline Event 6 -->
+            <div class="timeline-item">
+                <div class="circle-image">
+                    <img src="assets/end-1.jpg" alt="Fin de fiesta">
+                </div>
+                <div class="timeline-content">
+                    <h3>Fin de fiesta</h3>
+                    <p><span>⏰ 4:30 AM</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contacto">
+        <h2 class="titulo">Contacto</h2>
+        <p class="descripcion">En caso de que necesites contactar con nosotros, aquí te dejamos la información.</p>
+        <div class="contacto-container">
+            <!-- Mario -->
+            <div class="contacto-item">
+                <img src="assets/mario.jpg" alt="Mario">
+                <h3>Mario</h3>
+                <p><span>📞</span> <a href="tel:+34666666666">666 666 666</a></p>
+                <p><span>✉️</span> <a href="mailto:mario@example.com">mario@example.com</a></p>
+            </div>
+            <!-- Icon in the center -->
+            <div class="contacto-icon">
+                <img src="assets/union-icon.png" alt="Union Icon">
+            </div>
+            <!-- María -->
+            <div class="contacto-item">
+                <img src="assets/maria.jpg" alt="María">
+                <h3>María</h3>
+                <p><span>📞</span> <a href="tel:+34666666666">666 666 666</a></p>
+                <p><span>✉️</span> <a href="mailto:maria@example.com">maria@example.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section id="regalo" class="gift">
+        <h2 class="titulo">
+            Regalo 
+            <span class="toggle-icon">⬇</span>
+        </h2>
+        <p class="descripcion">¡Lo que más nos importa es que nos acompañes en este día!</p>
+        <div class="gift-content">
+            <p>Aunque si nos quieres echar una mano para sumar kilómetros a nuestra luna de miel, puedes hacer Bizums a nuestros contactos. O si lo prefieres:</p>
+            <p><strong class="highlight">MARÍA:</strong> ES1901820945370201598294</p>
+            <p><strong class="highlight">MARIO:</strong> ES4000492663382014264325</p>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section id="dresscode" class="dresscode">
+        <h2 class="titulo">Dress Code</h2>
+        <p class="descripcion">Se ruega vestimenta formal.</p>
+        <div class="icons">
+            <img src="assets/dress.png" alt="Dress Icon">
+            <img src="assets/suit.png" alt="Suit Icon">
+        </div>
+    </section>
+
+    <!-- Attendance Confirmation Section -->
+    <section id="asistencia" class="asistencia">
+        <h2 class="titulo">¿Vas a asistir?</h2>
+        <p class="descripcion">Rellena el siguiente formulario para indicar tu asistencia, ¡muchas gracias!</p>
+        <a href="https://forms.google.com" class="boton">Accede al formulario</a>
+        <!-- Audio Section -->
+        <div class="audio-container">
+            <audio controls>
+                <source src="assets/invitacion-audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>¡Te esperamos en nuestra boda!</p>
+    </footer>
+
+</body>
+</html>
