@@ -99,12 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     playButton.addEventListener("click", function () {
         if (music.paused) {
-            music.play().catch(error => console.log("Error al reproducir audio: ", error));
-            playButton.textContent = "🔊 Música en reproducción";
+            music.play()
+                .then(() => {
+                    playButton.textContent = "🔊 Música en reproducción";
+                })
+                .catch(error => {
+                    console.log("Error al reproducir audio: ", error);
+                    alert("Parece que tu navegador bloqueó la música. Activa el sonido y vuelve a intentarlo.");
+                });
         } else {
             music.pause();
             playButton.textContent = "🎵 Reproducir Música";
         }
     });
-
 });
