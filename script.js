@@ -29,7 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const timer = setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 🎁 Toggle Gift Section (Regalo)
+
+    const saveDateBtn = document.getElementById("saveDateBtn");
+
+    if (saveDateBtn) {
+        saveDateBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // 📅 Detalles del evento
+            const title = "Boda de María y Mario";
+            const location = "Iglesia XXXX, Madrid";
+            const description = "Nos encantaría que nos acompañes en este día tan especial. ¡Reserva la fecha!";
+            const startDate = "20250927T160000Z"; // Formato UTC YYYYMMDDTHHMMSSZ
+            const endDate = "20250927T220000Z"; // 6 horas después
+
+            // Generar el enlace de Google Calendar
+            const googleCalendarURL = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}&sf=true&output=xml`;
+
+            // Abrir en una nueva pestaña
+            window.open(googleCalendarURL, "_blank");
+        });
+    }
+
+    // Toggle Gift Section (Regalo)
     const giftSection = document.querySelector(".gift-content");
     const toggleIcon = document.querySelector(".gift .toggle-icon");
     const giftTitle = document.querySelector(".gift .titulo");
@@ -54,4 +76,19 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // Toggle Mobile Menu and Close on Click
+    const menuToggle = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", function () {
+        navList.classList.toggle("active");
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    document.querySelectorAll(".nav-list a").forEach(link => {
+        link.addEventListener("click", () => {
+            navList.classList.remove("active");
+        });
+    });
 });

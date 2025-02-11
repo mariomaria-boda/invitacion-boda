@@ -44,6 +44,57 @@ body, html {
     border-radius: 5px;
 }
 
+/* Hide regular nav-list on mobile */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.bar {
+    background: white;
+    height: 4px;
+    width: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
 /* Header - Soft Pink */
 .hero {
     position: relative;
@@ -187,7 +238,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .evento-item {
@@ -195,9 +246,26 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 400px;
     text-align: left;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
 }
+
+/* 🔹 Ajustes para móviles */
+@media (max-width: 768px) {
+    .eventos-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .evento-item {
+        flex: 1;
+        min-width: 45%; /* Mantiene dos columnas en móviles */
+    }
+}
+
 
 .evento-item h3 {
     font-family: 'Poppins', sans-serif;
@@ -266,6 +334,20 @@ body, html {
 
 .timeline-item:nth-child(odd) {
     flex-direction: row-reverse;
+}
+
+/* 🔹 Ajustes para móviles */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column !important; /* Evita que cambien de posición */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .timeline-content {
+        text-align: center;
+        max-width: 90%;
+    }
 }
 
 .circle-image {
@@ -342,6 +424,20 @@ body, html {
 .contacto-item {
     text-align: center;
     max-width: 200px;
+}
+
+/* 🔹 Ajustes para móviles */
+@media (max-width: 768px) {
+    .contacto-container {
+        flex-direction: row; /* Mantiene lado a lado en móviles */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contacto-item {
+        flex: 1;
+        min-width: 45%; /* Evita que se apilen demasiado */
+    }
 }
 
 .contacto-item img {
@@ -588,4 +684,6 @@ footer p {
         height: 40px;
     }
 }
+
+
 
