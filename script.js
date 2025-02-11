@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const title = "Boda de María y Mario";
             const location = "Iglesia XXXX, Madrid";
             const description = "Nos encantaría que nos acompañes en este día tan especial. ¡Reserva la fecha!";
-            const startDate = "20250927T160000Z"; // Formato UTC YYYYMMDDTHHMMSSZ
-            const endDate = "20250927T220000Z"; // 6 horas después
+            const startDate = "20250920T160000Z"; // Formato UTC YYYYMMDDTHHMMSSZ
+            const endDate = "20250920T220000Z"; // 6 horas después
 
             // Generar el enlace de Google Calendar
             const googleCalendarURL = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}&sf=true&output=xml`;
