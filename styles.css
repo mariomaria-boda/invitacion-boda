@@ -15,36 +15,30 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Mantiene un fondo semi-transparente */
+    padding: 10px 20px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
 }
 
-/* 🔹 Navigation Menu for Desktop */
+/* 🔹 Lista de navegación */
 .nav-list {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-.nav-list li {
-    list-style: none;
-}
-
+/* 🔹 Estilo de los enlaces */
 .nav-list li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 8px 12px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: block;
 }
 
 .nav-list li a:hover {
@@ -53,26 +47,22 @@ body, html {
     border-radius: 5px;
 }
 
-/* 🟢 Mobile Navigation - Hidden by Default */
+/* 🟢 Estilos del menú hamburguesa */
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
 }
 
-/* Bars for Hamburger Icon */
 .bar {
     background: white;
-    height: 4px;
+    height: 3px;
     width: 30px;
     margin: 5px 0;
     border-radius: 5px;
 }
 
-/* 🔹 Mobile Navigation (Hidden by Default) */
+/* 🔹 Ajuste para móviles */
 @media (max-width: 768px) {
     .nav-list {
         display: none;
@@ -80,12 +70,12 @@ body, html {
         position: absolute;
         top: 60px;
         right: 10px;
-        background: rgba(255, 255, 255, 0.95); /* Fondo claro */
-        width: 250px; /* Aumentamos el ancho */
-        padding: 15px;
+        background: rgba(255, 255, 255, 0.95); /* Fondo claro para mejor visibilidad */
+        width: 200px;
+        padding: 10px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        text-align: left;
+        text-align: center;
     }
 
     .nav-list.active {
@@ -93,39 +83,16 @@ body, html {
     }
 
     .nav-list li {
-        width: 100%;
+        padding: 10px 0;
     }
 
     .nav-list li a {
-        color: #5a5a5a;
-        font-size: 1.2rem; /* Aumentamos el tamaño del texto */
-        padding: 15px; /* Espaciado mayor */
-        width: 100%;
-        text-align: left;
+        color: #5a5a5a; /* Color oscuro para mejor contraste */
+        font-size: 1rem;
     }
 
-    .nav-list li a:hover {
-        background: #c69774;
-        color: white;
-        border-radius: 5px;
-    }
-
-    /* 🔹 Mejoramos el icono del menú hamburguesa */
     .menu-toggle {
         display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
-
-    .bar {
-        background: white;
-        height: 5px; /* Hacemos las barras más gruesas */
-        width: 35px; /* Aumentamos el ancho */
-        margin: 6px 0; /* Más separación entre las barras */
-        border-radius: 5px;
     }
 }
 

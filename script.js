@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navList.classList.toggle("active");
     });
 
-    // Cerrar el menú al hacer clic en una opción
+    // Cerrar el menú cuando se haga clic en un enlace
     document.querySelectorAll(".nav-list a").forEach(link => {
         link.addEventListener("click", () => {
             navList.classList.remove("active");
