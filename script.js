@@ -92,4 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
+    // Asegurar que el usuario haga clic antes de reproducir
+    const music = document.getElementById("weddingMusic");
+    const playButton = document.getElementById("playMusic");
+
+    playButton.addEventListener("click", function () {
+        if (music.paused) {
+            music.play().catch(error => console.log("Error al reproducir audio: ", error));
+            playButton.textContent = "🔊 Música en reproducción";
+        } else {
+            music.pause();
+            playButton.textContent = "🎵 Reproducir Música";
+        }
+    });
+
 });
